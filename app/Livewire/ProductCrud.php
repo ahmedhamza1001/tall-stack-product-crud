@@ -42,7 +42,7 @@ class ProductCrud extends Component
             ->orWhere('sku', 'like', '%' . $this->search . '%')
             ->orWhere('category', 'like', '%' . $this->search . '%')
             ->orderBy('created_at', 'desc')
-            ->paginate(10);
+            ->paginate(15);
 
         return view('livewire.product-crud', [
             'products' => $products

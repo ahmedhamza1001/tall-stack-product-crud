@@ -28,22 +28,11 @@
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">SKU
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Stock
-                        </th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Category</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Status</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Actions</th>
+                        @foreach (['ID', 'Name', 'SKU', 'Price', 'Stock', 'Category', 'Status', 'Actions'] as $column)
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                {{ $column }}
+                            </th>
+                        @endforeach
                     </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
@@ -133,7 +122,7 @@
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Product Name *</label>
                                     <input type="text" wire:model="name"
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                        class="p-3 border mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                                     @error('name')
                                         <span class="text-red-500 text-xs">{{ $message }}</span>
                                     @enderror
@@ -142,7 +131,7 @@
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">SKU *</label>
                                     <input type="text" wire:model="sku"
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                        class="p-3 border mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                                     @error('sku')
                                         <span class="text-red-500 text-xs">{{ $message }}</span>
                                     @enderror
@@ -151,7 +140,7 @@
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Description</label>
                                     <textarea wire:model="description" rows="3"
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                                        class="p-3 border mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-4">
@@ -162,7 +151,7 @@
                                                 <span class="text-gray-500">$</span>
                                             </div>
                                             <input type="number" step="0.01" wire:model="price"
-                                                class="pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                                class="p-3 border  pl-7 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                                         </div>
                                         @error('price')
                                             <span class="text-red-500 text-xs">{{ $message }}</span>
@@ -172,7 +161,7 @@
                                     <div>
                                         <label class="block text-sm font-medium text-gray-700">Stock *</label>
                                         <input type="number" wire:model="stock"
-                                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                            class="p-3 border mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                                         @error('stock')
                                             <span class="text-red-500 text-xs">{{ $message }}</span>
                                         @enderror
@@ -182,7 +171,7 @@
                                 <div>
                                     <label class="block text-sm font-medium text-gray-700">Category</label>
                                     <input type="text" wire:model="category"
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                        class="p-3 border mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                                 </div>
 
                                 <div>
