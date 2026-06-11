@@ -21,8 +21,14 @@
         <nav class="bg-white shadow-lg">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-16">
-                    <div class="flex items-center">
-                        <h1 class="text-xl font-bold text-gray-800">Product Management System</h1>
+                    <div class="flex items-center space-x-8">
+                        <h1 class="text-xl font-bold text-gray-800">CRM System</h1>
+                        <div class="flex space-x-4">
+                            <a href="/products"
+                                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
+                            <a href="/customers"
+                                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Customers</a>
+                        </div>
                     </div>
                 </div>
             </div>
