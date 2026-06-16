@@ -24,6 +24,8 @@
                     <div class="flex items-center space-x-8">
                         <h1 class="text-xl font-bold text-gray-800">CRM System</h1>
                         <div class="flex space-x-4">
+                            <a href="/" wire:navigate
+                                class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                             <a href="/products" wire:navigate
                                 class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Products</a>
                             <a href="/customers" wire:navigate
